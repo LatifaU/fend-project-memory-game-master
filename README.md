@@ -31,3 +31,5 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Special thanks to 'sandraisrael' for making this memory game clearer and easier to do.
