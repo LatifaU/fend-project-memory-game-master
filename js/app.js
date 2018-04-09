@@ -61,7 +61,9 @@ function restart(){
     		deck.appendChild(item);
     	});
     	//hide all cards
-    	cards[i].classList.remove("show", "open", "match");
+    	cards[i].classList.remove("show");
+    	cards[i].classList.remove("open");
+    	cards[i].classList.remove("match");
     }
     //reset number Of moves
     numberOfMoves = 0;
@@ -110,7 +112,7 @@ function startTimer(){
 
 
 //declaring variable which contiain function to open and show cards on screen after being matched
-var showCard = function (){
+var showCard = function (){	
 	this.classList.toggle("open");
 	this.classList.toggle("show");
 };
@@ -155,10 +157,11 @@ function cardOpened() {
  */
 //matchedCards function for matched cards to display them on screen
 function matchedCards(){
-	openedCards[0].classList.add("match");
-	openedCards[1].classList.add("match");
-	openedCards[0].classList.remove("show", "open");
-	openedCards[1].classList.remove("show", "open");
+	for(var i= 0; i < 2; i++){
+	openedCards[i].classList.add("match");
+	openedCards[i].classList.remove("open");
+	openedCards[i].classList.remove("show");
+}
 	//clear current opened cards list
 	openedCards = [];
 }
@@ -172,8 +175,10 @@ function unmatchedCards(){
 	//interval to show opened cards
 	setTimeout(function(){
 		//to hide unmatch cards
-		openedCards[0].classList.remove("show", "open");
-		openedCards[1].classList.remove("show", "open");
+		for(var i= 0; i < 2; i++){
+		openedCards[i].classList.remove("open");
+		openedCards[i].classList.remove("show");
+	}
 		//clear current opened cards list
 		openedCards = [];
 	},600);
@@ -251,7 +256,7 @@ function congratulations(){
 }
 
 //playAgain function to hide modal aka overlayPopup and reset game settings
-function playAgain(){
+function replay(){
 	//hide all cards
 	overlayPopup.classList.remove("show");
 	//call restart function to reset all game settings
