@@ -107,6 +107,7 @@ function startTimer(){
 var showCard = function (){	
 	this.classList.toggle("open");
 	this.classList.toggle("show");
+    this.classList.toggle("disabled");
 };
 
 
@@ -150,6 +151,7 @@ function cardOpened() {
 function matchedCards(){
 	for(var i= 0; i < 2; i++){
 	openedCards[i].classList.add("match");
+	openedCards[i].classList.add("disabled");
 	openedCards[i].classList.remove("open");
 	openedCards[i].classList.remove("show");
 }
@@ -170,6 +172,12 @@ function unmatchedCards(){
 		openedCards[i].classList.remove("open");
 		openedCards[i].classList.remove("show");
 	}
+	Array.prototype.filter.call(cards, function(card){
+        card.classList.remove('disabled');
+        for(var i = 0; i < matchedCard.length; i++){
+            matchedCard[i].classList.add("disabled");
+        }
+    });
 		//clear current opened cards list
 		openedCards = [];
 	},600);
@@ -190,6 +198,7 @@ function increaseCounter(){
      	second = 0;
      	minute = 0; 
      	hour = 0;
+		startTimer();
      }
     //setting start based on number of moves
     //if number of moves between 10 and 15 then 2 stars

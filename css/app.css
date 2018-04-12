@@ -39,7 +39,7 @@ h1 {
 
  .deck {
     width: 660px;
-    min-height: 680px;
+    min-height: 400px;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
@@ -62,6 +62,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px 5px 5px 5px;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
@@ -81,13 +82,17 @@ h1 {
     font-size: 33px;
 }
 
+.deck .card.disabled {
+    pointer-events: none;
+}
+
 /*
  * Styles for the Score Panel
  */
 
  .score-panel {
     text-align: left;
-    width: 345px;
+    width: 380px;
     margin-bottom: 10px;
 }
 
@@ -178,3 +183,26 @@ h1 {
     font-size: 20px;
     color: white;
 }
+
+/* iPhone 6 landscape */
+@media only screen and (min-device-width: 375px)
+  and (orientation: landscape) {
+    .container {
+        font-size: 19px;
+    }
+
+    .deck {
+        width: 800px;
+        height: 400px !important;
+    }
+
+    .deck .card {
+        height: 110px;
+        width: 110px;
+    }
+
+    .popup {
+        width: 60%;
+    }
+}
+
