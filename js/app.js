@@ -2,28 +2,22 @@
  * Create a list that holds all of your cards
  */
  // declaring cards
- var card;
- card = document.getElementsByClassName("card");
+ var card = document.getElementsByClassName("card");
  var cards = [...card]
 
 //declar deck of cards
-var deck;
-deck = document.getElementById("card-deck");
+var deck = document.getElementById("card-deck");
 // declaring number of moves
 var numberOfMoves = 0;
-var counter;
-counter = document.querySelector(".numberOfMoves");
+var counter = document.querySelector(".numberOfMoves");
 //declaring opened cards
 var openedCards = [];
 //declaring matched cards
-var matchedCard;
-matchedCard = document.getElementsByClassName("match");
+var matchedCard = document.getElementsByClassName("match");
 //declaring number of stars
-var numberOfStars;
-numberOfStars = document.querySelectorAll(".fa-star");
+var numberOfStars = document.querySelectorAll(".fa-star");
 //declaring stars list 
-var starsList;
-starsList = document.querySelectorAll(".stars li");
+var starsList = document.querySelectorAll(".stars li");
 
 /*
  * Display the cards on the page
@@ -77,8 +71,7 @@ function restart(){
     }
     //resetting timer variables
     second = 0, minute = 0; hour = 0;
-    var timer;
-    timer = document.querySelector(".timer");
+    var timer = document.querySelector(".timer");
     //display time on screen
     timer.innerHTML = "0 min(s), 0 sec(s)";
     //clear previous interval time
@@ -88,8 +81,7 @@ function restart(){
 //setting game timer
 //declaring timer variables
 var second = 0, minute = 0; hour = 0;
-var timer;
-timer = document.querySelector(".timer");
+var timer = document.querySelector(".timer");
 var interval;
 //startTimer function to set game timer and display it on screen
 function startTimer(){
@@ -120,8 +112,7 @@ var showCard = function (){
 
 //cardOpened function to add current opened card into list and check if matched
 function cardOpened() {
-	var length;
-	length = openedCards.length;
+	var length = openedCards.length;
 	//add current card into openedCards list
 	openedCards.push(this);
 	//if number of selected cards are two

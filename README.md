@@ -5,31 +5,22 @@
 ## Table of Contents
 
 
-* [Instructions](#instructions)
+* [What Is Memory Game](#What Is Memory Game)
 
-* [Contributing](#contributing)
+* [Instructions](#Instructions)
 
+
+
+## What Is Memory Game
+Memory game require a player to match similar carda. 
+For example, there are 12 cards composed of 6 pairs in random order. 
+A player selects two cards with the goal of having matching pair by using their memory. 
 
 
 ## Instructions
-
-
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-
-
-## Contributing
-
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Special thanks to 'sandraisrael' for making this memory game clearer and easier to do.
+* Select two cards
+* Keep viewing cards and to remember each card and where it was.
+* If the two cards match, they will be turned up.
+* If the two cards don't match, they will be turned down.
+* The game is over when all the cards have been matched.
+* Remember, try to win with less moves and in faster time to gain more stars.
