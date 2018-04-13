@@ -58,9 +58,12 @@ function restart(){
     	cards[i].classList.remove("show");
     	cards[i].classList.remove("open");
     	cards[i].classList.remove("match");
+    	cards[i].classList.remove("disabled");
     }
     //reset number Of moves
     numberOfMoves = 0;
+
+    openedCards = [];
     //display number of moves on screen
     counter.innerHTML = numberOfMoves;
     //resetting number of stars
@@ -116,6 +119,13 @@ function cardOpened() {
 	var length = openedCards.length;
 	//add current card into openedCards list
 	openedCards.push(this);
+
+	if(numberOfMoves < 1){
+		if (length === 0)
+		//start timer once the first card if clicked aka number of moves is 0
+		startTimer();
+	}
+
 	//if number of selected cards are two
 	if(length === 1){
 		//call function to increase number of moves
@@ -165,6 +175,10 @@ function matchedCards(){
  */
 //unmatchedCards function for unmatched cards to hide them on screen
 function unmatchedCards(){
+	//disable all cards
+	Array.prototype.filter.call(cards, function(card){
+        card.classList.add('disabled');
+    });
 	//interval to show opened cards
 	setTimeout(function(){
 		//to hide unmatch cards
@@ -192,14 +206,6 @@ function increaseCounter(){
 	numberOfMoves++;
 	//display current number of moves
 	counter.innerHTML = numberOfMoves;
-
-     //start timer once the first card if clicked aka number of moves is 1
-     if(numberOfMoves == 1){
-     	second = 0;
-     	minute = 0; 
-     	hour = 0;
-		startTimer();
-     }
     //setting start based on number of moves
     //if number of moves between 10 and 15 then 2 stars
     if (numberOfMoves > 10 && numberOfMoves < 15){

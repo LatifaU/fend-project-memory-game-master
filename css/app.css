@@ -39,7 +39,6 @@ h1 {
 
  .deck {
     width: 660px;
-    min-height: 400px;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
@@ -184,16 +183,15 @@ h1 {
     color: white;
 }
 
-/* iPhone 6 landscape */
-@media only screen and (min-device-width: 375px)
-  and (orientation: landscape) {
+/* iPhone 6  */
+@media only (min-device-width: 300px) {
     .container {
         font-size: 19px;
     }
 
     .deck {
-        width: 800px;
-        height: 400px !important;
+        width: 90% !important;
+        height: 60% !important;
     }
 
     .deck .card {
@@ -205,4 +203,3 @@ h1 {
         width: 60%;
     }
 }
-
