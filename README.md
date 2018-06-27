@@ -12,8 +12,10 @@ Memory game require a player to match similar carda.
 For example, there are 12 cards composed of 6 pairs in random order. 
 A player selects two cards with the goal of having matching pair by using their memory. 
 
-## How to play the game
-* Download ZIP file from my github repository.
+### GitHub Project Demo
+* Project Demo: <https://latifau.github.io/fend-project-memory-game-master/>
+### GitHub Project Repository
+* Download ZIP file from repository: <https://github.com/LatifaU/fend-project-memory-game-master>
 * Unzip file.
 * Open index.html into browser.
 
